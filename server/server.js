@@ -6,15 +6,15 @@ const cookieParser = require('cookie-parser')
 const fileUpload = require('express-fileupload')
 const chatRoute = require('./routesin/chat');
 
+const app = express();
+const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
+
+
 const cors = require('cors');
 app.use(cors({
   origin: 'http://localhost:3000',
   credentials: true
 }));
-
-
-const app = express();
-const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
 
 app.use(cookieParser())
 app.use(fileUpload({
