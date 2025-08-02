@@ -93,7 +93,10 @@ const userCtrl = {
     },
     logout: async(requ,resp)=>{
         try{
-             resp.clearCookie('refreshtoken',{path:'/user/refresh_token'}); // from this path we have to delete cookie
+             resp.clearCookie('refreshtoken',{path:'/user/refresh_token',
+                sameSite: 'none',  
+                secure: true
+             }); // 
              return resp.json({msg:"Logout"})
         }
         catch(eror){
