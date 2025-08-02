@@ -27,7 +27,7 @@ const CheckoutForm = ({product}) => {
     const selleremail=product.product.farmeremail; 
 
     useEffect(() => {
-        fetch('/create-payment-intent', {
+        fetch('https://farm2table-server.onrender.com/create-payment-intent', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ amount, selleremail, productname, shipping: address })

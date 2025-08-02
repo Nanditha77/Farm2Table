@@ -49,7 +49,7 @@ const DetailProduct = () => {
     try {
       await updateProduct(detailsProduct._id, editData);
       alert("Product updated successfully!");
-      const res = await axios.get('/api/products');
+      const res = await axios.get('https://farm2table-server.onrender.com/api/products');
       setProducts(res.data.products);
     } catch (err) {
       console.error("Update failed:", err);

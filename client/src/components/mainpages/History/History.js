@@ -12,7 +12,7 @@ const History = () => {
   useEffect(() => {
     const getHistory = async () => {
       try {
-        const res = await axios.get('/api/user_orders', {
+        const res = await axios.get('https://farm2table-server.onrender.com/api/user_orders', {
           headers: { Authorization: token }
         });
         setHistory(res.data);
@@ -24,14 +24,14 @@ const History = () => {
   }, [token]);
 
   useEffect(() => {
-    axios.get('/api/farmer/orders', {
+    axios.get('https://farm2table-server.onrender.com/api/farmer/orders', {
       headers: { Authorization: token }
     }).then(res => setOrders(res.data))
     .catch(eror => console.log(eror));
   }, [token]);
 
   const updateStatus = async (id, status) => {
-    await axios.put(`/api/farmer/orders/${id}/status`, { status }, {
+    await axios.put(`https://farm2table-server.onrender.com/api/farmer/orders/${id}/status`, { status }, {
       headers: { Authorization: token }
     });
     setOrders(orders.map(o => o._id === id ? { ...o, deliveryStatus: status } : o));

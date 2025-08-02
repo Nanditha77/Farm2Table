@@ -9,7 +9,7 @@ const SuccessPage = () => {
 useEffect(() => {
     const fetchOrder = async () => {
         try {
-            const res = await axios.get(`/api/order/payment/${id}`);
+            const res = await axios.get(`https://farm2table-server.onrender.com/api/order/payment/${id}`);
             setOrderDetails(res.data.order);
         } catch (err) {
             console.error(err);
@@ -22,7 +22,7 @@ useEffect(() => {
 
     return (
         <div className="success-container" style={{ padding: 20 }}>
-            <h2>✅ Payment Successful</h2>
+            <h2>Payment Successful</h2>
             <p>Transaction ID: <b>{orderDetails.paymentIntentId}</b></p>
 
             <h3>Delivery Address:</h3>
