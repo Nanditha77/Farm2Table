@@ -76,7 +76,9 @@ const userCtrl = {
 
               resp.cookie('refreshtoken',refreshtoken,{
                 httpOnly:true,
-                path:'/user/refresh_token'
+                path:'/user/refresh_token',
+                sameSite: 'none',               
+                secure: true 
               })
 
               const  updated= await Users.findOneAndUpdate(
