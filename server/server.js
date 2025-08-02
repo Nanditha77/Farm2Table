@@ -58,7 +58,7 @@ app.post('/api/webhook', express.raw({ type: 'application/json' }), async (req, 
         });
 
         await order.save();
-        console.log('✅ Order saved from webhook:', order);
+        console.log('Order saved from webhook:', order);
     }
 
     res.send();
@@ -76,13 +76,7 @@ app.listen(PORT,()=>{
 
 app.post('/create-payment-intent', async (req, res) => {
     const { amount, selleremail, productname, shipping } = req.body;
-     console.log("🟡 Received Payment Request");
-    console.log("Amount:", amount);
-    console.log("Seller Email:", selleremail);
-    console.log("Product Name:", productname);
-    console.log("Shipping:", shipping);
-    console.log("Stripe Key Loaded:", process.env.STRIPE_SECRET_KEY ? "✅ Yes" : "❌ Missing");
-
+  
     try {
         const paymentIntent = await stripe.paymentIntents.create({
             amount: amount * 100,
@@ -98,7 +92,6 @@ app.post('/create-payment-intent', async (req, res) => {
         });
         res.send({ clientSecret: paymentIntent.client_secret });
     } catch (err) {
-        console.error("❌ Stripe Error:", err.message);
         res.status(500).send({ error: err.message });
     }
 });
