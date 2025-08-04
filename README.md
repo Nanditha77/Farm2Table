@@ -1,6 +1,6 @@
 # Farm2Table
 
- <img width="1224" height="689" alt="Screenshot (28)" src="https://github.com/user-attachments/assets/498a06d9-0488-4580-8dcb-014a11caafe9" />
+<img width="1324" height="692" alt="Screenshot (29)" src="https://github.com/user-attachments/assets/7f650dbd-3531-49d7-bf8a-64e9e39db42c" />
 
 **About**
 
