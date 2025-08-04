@@ -34,28 +34,28 @@ __Languages and Framerwork used:__
 - Frontend : ReactJs, React Router, Axios
 - Backend: Express, Node.js, Mongoose
 - MongoDB Atlas: A cloud NoSQL database used to store movie data efficiently.
-- Deployment: Vercel (frontend), Render (backend)
+- Deployment: Vercel (frontend), Render (backend)  
 
-- Created a .env file in server & client with required keys for security.
+- Created a .env file in server & client with required keys for security.  
 
-__Installation__
+__Installation__  
 
 - Clone the repository:  
 
 git clone https://github.com/Nanditha77/Farm2Table.git  
-cd Farm2Table 
+cd Farm2Table  
 
 - Install backend dependencies:  
 
-cd server 
+cd server  
 npm install   
 
 - Install frontend dependencies:  
 
-cd client 
+cd client  
 npm install   
 
-- Connect backend to Mongodb Atlas by using MONGO_URI key in .env with value from Atlas.
+- Connect backend to Mongodb Atlas by using MONGO_URI key in .env with value from Atlas.  
 
 - Start the backend server:  
 
@@ -64,9 +64,9 @@ npm run dev
 
 - Start the frontend server:  
 
-cd client 
+cd client  
 npm start  
 
 __Usage__  
-Navigate to https://farm2table-client.vercel.app/ to use the application.
+Navigate to https://farm2table-client.vercel.app/ to use the application.  
 
