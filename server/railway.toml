@@ -1,6 +1,14 @@
 [build]
 builder = "NIXPACKS"
 
-[nixpacks]
-buildCommand = "npm install"
-startCommand = "npm start"
+[phases.setup]
+nixPkgs = ["nodejs_18"]
+
+[phases.install]
+cmds = ["npm install"]
+
+[phases.build]
+cmds = ["npm run build"]
+
+[start]
+cmd = "npm start"
