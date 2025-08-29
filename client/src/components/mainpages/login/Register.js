@@ -17,7 +17,7 @@ const Register = () => {
   const registerSubmit = async e =>{
     e.preventDefault();
     try{
-            await axios.post('https://farm2table-server.onrender.com/user/register',{...user}); //user ko bejna hai post request pe
+            await axios.post('https://farm2table-production.up.railway.app/user/register',{...user}); //user ko bejna hai post request pe
 
             localStorage.setItem('firstRegister',true)// first login ko true kar dete hai
 

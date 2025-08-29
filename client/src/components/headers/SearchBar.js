@@ -9,7 +9,7 @@ export default function SearchBar({ onSelect }) {
   const fetchSuggestions = useMemo(() => debounce(async (searchText) => {
   if (!searchText) return setSuggestions([]);
   try {
-    const res = await axios.get(`https://farm2table-server.onrender.com/api/products?title=${searchText}`);
+    const res = await axios.get(`https://farm2table-production.up.railway.app/api/products?title=${searchText}`);
     console.log('Products:', res.data.products);  
     setSuggestions(res.data.products);
   } catch (error) {

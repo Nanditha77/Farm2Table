@@ -18,7 +18,7 @@ const Login = () => {
   const loginSubmit = async e =>{
     e.preventDefault();
     try{
-            await axios.post('https://farm2table-server.onrender.com/user/login',{...user,role}); //user ko bejna hai post request pe
+            await axios.post('https://farm2table-production.up.railway.app/user/login',{...user,role}); //user ko bejna hai post request pe
 
             localStorage.setItem('firstLogin',true)// first login ko true kar dete hai
 

@@ -9,7 +9,7 @@ const SuccessPage = () => {
 useEffect(() => {
     const fetchOrder = async () => {
         try {
-            const res = await axios.get(`https://farm2table-server.onrender.com/api/order/payment/${id}`);
+            const res = await axios.get(`https://farm2table-production.up.railway.app/api/order/payment/${id}`);
             setOrderDetails(res.data.order);
         } catch (err) {
             console.error(err);
