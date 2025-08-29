@@ -1,4 +1,5 @@
 [build]
 builder = "NIXPACKS"
-buildCommand = "npm install"
+installCommand = "npm install"
+buildCommand = ""
 startCommand = "npm start"
