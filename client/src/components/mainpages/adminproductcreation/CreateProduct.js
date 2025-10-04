@@ -41,7 +41,7 @@ const CreateProduct = () => {
       formData.append("file", file);
 
       setLoading(true);
-      const res = await axios.post('https://farm2table-production.up.railway.app/api/upload', formData, {
+      const res = await axios.post('https://farm2table-server.onrender.com/api/upload', formData, {
         headers: {
           'content-type': 'multipart/form-data',
           Authorization: token

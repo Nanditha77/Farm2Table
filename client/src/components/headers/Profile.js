@@ -12,7 +12,7 @@ const Profile = () => {
   const [isAdmin,setIsAdmin] = state.UserAPI.isAdmin
 
    const logoutUser = async () =>{
-    await axios.get('https://farm2table-production.up.railway.app/user/logout')
+    await axios.get('https://farm2table-server.onrender.com/user/logout')
     setIsAdmin(false);
     setIsLogged(false);
     window.location.reload();

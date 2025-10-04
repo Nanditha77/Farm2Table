@@ -15,7 +15,7 @@ const UserAPI = (token) => {
            if(token){
             const getUser = async ()=>{
               try{
-                     const resp = await axios.get('https://farm2table-production.up.railway.app/user/infor',{
+                     const resp = await axios.get('https://farm2table-server.onrender.com/user/infor',{
                       headers:{Authorization:token}
                      });
              //token hai matlab user hai, us user ke cart pe dikhana padega unka item, so infor lethe hai

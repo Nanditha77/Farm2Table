@@ -11,7 +11,7 @@ const Chatbot = () => {
     if (!message.trim()) return;
     setLoading(true);
     try {
-      const res = await axios.post('https://farm2table-production.up.railway.app/api/chat', { message });
+      const res = await axios.post('https://farm2table-server.onrender.com/api/chat', { message });
       setReply(res.data.reply);
     } catch (eror) {
       setReply('⚠️ Sorry, something went wrong.');

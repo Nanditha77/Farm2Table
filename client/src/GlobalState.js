@@ -10,7 +10,7 @@ export const DataProvider = ({children}) =>{
 
     const refreshToken = async () =>{
         try{
-        const resp = await axios.get('https://farm2table-production.up.railway.app/user/refresh_token')   //refreshtoken hame server mein userCtrl mein hai
+        const resp = await axios.get('https://farm2table-server.onrender.com/user/refresh_token')   //refreshtoken hame server mein userCtrl mein hai
         setToken(resp.data.accesstoken);
         }
         catch(eror){

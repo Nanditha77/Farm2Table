@@ -18,14 +18,14 @@ const ProductAPI = () => {
     } // isiliye maine apko pehle frontend dikhaya tha kyunki muje dikhana tha kaise ham get set karlenge agar apke paas koi backend pada ra hua pehle se hi toh
     
     const deleteProduct = async (product) =>{
-      const resp = await axios.delete(`https://farm2table-production.up.railway.app/api/products/${product.product._id}`);
+      const resp = await axios.delete(`https://farm2table-server.onrender.com/api/products/${product.product._id}`);
       alert(resp.data.msg);
       getProducts();
     }
 
     const updateProduct = async (productId, updatedData) =>{
   try {
-    const res = await axios.put(`https://farm2table-production.up.railway.app/api/products/${productId}`, updatedData);
+    const res = await axios.put(`https://farm2table-server.onrender.com/api/products/${productId}`, updatedData);
     alert(res.data.msg);
   } catch (err) {
     alert(err.response?.data?.msg || "Update failed");
@@ -35,7 +35,7 @@ const ProductAPI = () => {
 
 const createProduct = async (newProductData, token) => {
   try {
-    const res = await axios.post('https://farm2table-production.up.railway.app/api/products', newProductData, {
+    const res = await axios.post('https://farm2table-server.onrender.com/api/products', newProductData, {
       headers: { Authorization: token }
     });
     alert(res.data.msg);
